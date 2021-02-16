@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/materialicons.css" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <meta charset="UTF-8" />
+    <title>LIFAP5 2019-2020 - Client</title>
+  </head>
+
+  <!-- Modal Structure Connexion -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="titleLog">Connexion</h4>
+      <div id="logContent" class="row">  
+        <div class="input-field col s12">
+          <input id="xApiKey" type="text" class="validate">
+          <label for="xApiKey">X-API-KEY</label>
+        </div>           
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="log" class=" modal-action modal-close waves-effect waves-green btn-flat">Se connecter</a>
+      <a id="cancelLog" class=" modal-action modal-close waves-effect waves-green btn-flat">Annuler</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure Warning -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Attention</h4>
+      <p>
+        Vos réponses vont être perdu. Voulez-vous quand même continuez ?
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a id="continue" class=" modal-action modal-close waves-effect waves-green btn-flat">Continuer</a>
+      <a id="cancelContinue" class=" modal-action modal-close waves-effect waves-green btn-flat">Annuler</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure Delete Question-->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Suppression</h4>
+      <p>
+        Êtes-vous sûr de vouloir supprimer cette question ?
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a id="valid-del-quest" class=" modal-action modal-close waves-effect waves-green btn-flat">Supprimer</a>
+      <a id="cancel-del-quest" class=" modal-action modal-close waves-effect waves-green btn-flat">Annuler</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure Delete Quizz -->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <h4>Suppression</h4>
+      <p>
+        Êtes-vous sûr de vouloir supprimer ce quizz ?
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a id="valid-del-quizz" class=" modal-action modal-close waves-effect waves-green btn-flat">Supprimer</a>
+      <a id="cancel-del-quizz" class=" modal-action modal-close waves-effect waves-green btn-flat">Annuler</a>
+    </div>
+  </div>
+
+  <body>
+    <header>
+      <nav class="nav-extended blue-grey lighten-1">
+        <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper blue-grey">
+              <a href="#!" class="brand-logo  center">Quizzz<i class="material-icons right">question_answer</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                  <i id="id-login" class="material-icons modal-trigger" data-target="modal1">account_circle</i>
+                </li>
+              </ul>
+            </div>
+            <!-- nav-wrapper  -->
+          </nav>
+        </div>
+        <!-- navbar-fixed -->
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent tabs-fixed-width">
+            <li class="tab">
+              <a id="id-all-quizzes-tab" class="active" href="#id-all-quizzes">Tous les quiz</a>
+            </li>
+            <li class="tab"><a id="id-my-quizzes-tab" href="#id-my-quizzes">Mes quiz</a></li>
+            <li class="tab"><a id="id-my-answers-tab" href="#id-my-answers">Mes réponses</a></li>
+          </ul>
+        </div>
+        <!-- nav-content -->
+      </nav>
+      <!-- nav-extended -->
+    </header>
+
+    <main>
+      <div>
+        <!-- class="container" -->
+        <!-- Un premier onglet pour tous les quizzes-->
+        <div id="id-all-quizzes">
+          <div class="row">
+            <div class="col l4">
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">settings</i>Filtre</div>
+                  <div class="collapsible-body">
+                    <div class="input-field">
+                      <select id="iptLimit">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50" selected>50</option>
+                        <option value="75">75</option>
+                      </select>
+                      <label>Nombre de résultat</label>
+                    </div>
+                    <div class="input-field">
+                      <select id="iptOrder">
+                        <option value="quiz_id" selected>ID de quizz</option>
+                        <option value="created_at">Date de création</option>
+                        <option value="title">Titre</option>
+                        <option value="owner_id">Propriétaire</option>
+                      </select>
+                      <label>Trié par</label>
+                    </div>
+                    <div class="input-field">
+                      <select id="iptDir">
+                        <option value="asc" selected>Croissant</option>
+                        <option value="desc">Décroissant</option>
+                      </select>
+                      <label>Ordre</label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div id="id-all-quizzes-list"></div>
+            </div>
+            <div class="col l8">
+              <div id="id-all-quizzes-main"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Un second onglet pour ses propres quizzes-->
+        <div id="id-my-quizzes">
+          <div class="row">
+            <div class="col l4">
+              <div id="id-my-quizzes-list"></div>
+            </div>
+            <div class="col l8">
+              <div id="id-my-quizzes-main"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Un dernier onglet pour ses propres réponses-->
+        <div id="id-my-answers">
+          <div class="row">
+            <div class="col l4">
+              <div id="id-my-answers-list"></div>
+            </div>
+            <div class="col l8">
+              <div id="id-my-answers-main"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <footer class="page-footer grey darken-1">
+      <div class="footer-copyright">
+        <div class="container">
+          CC BY-NC-SA 3.0 FR
+          <a class="grey-text text-lighten-4 right" href="https://lifap5.univ-lyon1.fr/">lifap5.univ-lyon1.fr</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- l'ordre compte dans les scripts : ils sont lues puis interprétés DANS L'ORDRE -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.min.js" defer></script>
+    <script type="text/javascript" src="js/websocket.js" defer></script>
+    <script type="text/javascript" src="js/modeles.js" defer></script>
+    <script type="text/javascript" src="js/vues.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+  </body>
+</html>

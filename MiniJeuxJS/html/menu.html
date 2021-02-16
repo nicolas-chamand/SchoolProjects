@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu principal</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="..\styles\menu.css">
+		<link rel="stylesheet" type="text/css" href="..\styles\IA.css">
+	</head>
+	<body>
+
+		<section id="global">
+
+			<nav>
+				<ol>
+					<li class="selected">
+					</li>
+
+					<li>
+					</li>
+
+					<li>
+					</li>
+					
+					<li>
+					</li>
+				</ol>
+			</nav>
+			
+			<div>
+				<img id="left_arrow" src="..\images\left-arrow.png" alt="Flèche gauche">
+				<img id="right_arrow" src="..\images\right-arrow.png" alt="Flèche droite">
+			</div>
+
+			<section id="threedee">
+				<section id="menu">
+					<div class="box screen-0">
+						<a class="center a_1" href="..\html\page1.html">Le pendu</a>
+					</div>
+					<div class="box screen-1">
+						<a class="center a_2" href="..\html\page2.html">Snake</a>
+					</div>
+					<div class="box screen-2">
+						<a class="center a_3" href="..\html\page3.html">Les tables</a>
+					</div>
+					<div class="box screen-3">
+						<h1 id="standby">Stand-by</h1>
+						<div id="timer">
+							<div class="modif">00</div>
+							<div>Jours : </div>
+							<div class="modif">00</div>
+							<div>Heures : </div>
+							<div class="modif">00</div>
+							<div>Minutes : </div>
+							<div class="modif">00</div>
+							<div>Secondes</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+		</section>
+		
+		<section class="fixed toggle">
+				<div class="help">
+					<div id="help_text">
+						<h1 id="header_help"><img src="..\images\logo_account.png" alt="Logo de Elia" id="logo"> Elia <span id="online">(En ligne)</span></h1>
+					</div>
+					<div id="toggle_help">
+						<img id='arrow' src="..\images\left-arrow.png">
+					</div>
+				</div>	
+		</section>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+		<script type="text/javascript" src="..\js\IA_object.js"></script>
+		<script type="text/javascript" src="..\js\menu.js"></script>
+	</body>
+</html>

@@ -1,0 +1,512 @@
+<!-- Par Seunguk YUN 11612254 et Nicolas CHAMAND 11908794 -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Memory Check Exercices - Page d'exercices</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrapLight.css">
+	<link rel="stylesheet" type="text/css" href="styles/general.css">
+	<link rel="stylesheet" type="text/css" href="styles/responsive-tables.css">
+</head>
+
+<body>
+
+	<header>
+		<img id="logo" src=data/brain.png class="img-fluid float-left mt-4 mt-sm-0" alt="Logo du site web">
+		<h1 class="titre">Memory Check Exercices</h1>
+	</header>
+
+
+	<main>	
+		<div class="row mt-3">
+			<div class="col custom-control custom-switch text-right mb-2">
+				<label class="switch">
+				  <input id="darkSwitch" type="checkbox">
+				  <span class="slider round"></span>
+				</label>
+				<span class="float-right mt-1 ml-2">Mode nuit</span>
+			</div>
+		</div>
+		<div class="card bg-secondary mb-5">
+			<h2 class="card-header bg-light">Introduction</h2>
+			<div class="card-body">
+				<h4 class="card-title">Bienvenue sur le site d'exercices Memory Check Exercices.</h4>
+				<p class="card-text">Ce site recense plusieurs exercices permettant de travailler la mémoire. Vous pourrez ajouter des exercices qui vous parraissent intéressants, modifier les exercices déjà présents, supprimer certains exercices et trouver l'exercice qui vous convient avec l'outil de recherche.</p>
+				<div class="text-right">
+					<button title="Bouton pour ne plus afficher l'introduction" id="hideIntro" class="btn btn-primary">Ne plus afficher</button>
+				</div>
+				
+			</div>
+		</div>
+		<div id="msg_add" class="alert alert-success msg-alert d-none" role="alert">
+			L'exercice a été ajouté avec succès.
+		</div>
+		<div id="msg_edit" class="alert alert-success msg-alert d-none" role="alert">
+			L'exercice a été modifié avec succès.
+		</div>
+		<div id="msg_click_edit" class="alert alert-info msg-alert d-none" role="alert">
+			Cliquez sur l'exercice à modifier.
+		</div>
+		<div id="msg_click_del" class="alert alert-info msg-alert d-none" role="alert">
+			Sélectionnez les exercices à supprimer.
+		</div>
+		<div id="msg_del" class="alert alert-success msg-alert d-none" role="alert">
+			Suppresion réussie.
+		</div>
+		<div id="msg_del_error" class="alert alert-warning msg-alert d-none" role="alert">
+			Veuillez sélectionnez un exercice à supprimer.
+		</div>
+		<div id="msg_error" class="alert alert-danger msg-alert d-none" role="alert">
+			Veuillez remplir tous les champs du formulaire.
+		</div>
+
+	 	<div id="affichage">
+			 <h2 id="titretab" class="titre text-primary">Tableau des exercices</h2>
+			 <!-- modification du tableau -->
+			<form autocomplete="off" class="form-group form-row" id="form_recherche">
+			 	<div class="col-md-10"></div>
+			 	<div class="autocomplete  col-md-2">
+			 		<input class="form-control" type="search" id="search-ipt" placeholder="Rechercher">
+			 	</div>
+				
+			</form>
+			<div id="msg_warning" class="alert alert-warning d-none" role="alert">
+				Il n'y a aucun exercice. Cliquez sur le bouton pour en ajouter.
+			</div>
+			<div id="msg_noresult" class="alert alert-warning d-none" role="alert">
+				La recherche n'a donné aucun résultat.
+			</div>
+	 		<table id="tableau" class="table responsive table-striped table-hover">
+	 			<thead class="thead-light">
+	 				<tr>
+	 					<th class="d-none delbox">
+	 					</th>
+		 				<th>
+		 					Nom de l'exercice
+		 				</th>
+		 				<th>
+		 					Type d'activité
+		 				</th >
+		 				<th id="description">
+		 					Description
+		 				</th>
+		 				<th>
+		 					Public cible
+		 				</th>
+		 				<th>
+		 					Durée de l'activité
+		 				</th>
+		 				<th>
+		 					Niveau de difficulté
+		 				</th>
+		 				<th>
+		 					Date de création
+		 				</th>
+		 				<th id="auteur">
+		 					Informations sur l'auteur
+		 				</th>
+		 			</tr>
+	 			</thead>
+	 			<tbody>
+	 				<tr>
+	 					<td class="d-none delbox">
+	 						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck1">
+							  <label class="custom-control-label" for="customCheck1"></label>
+							</div>	
+	 					</td>
+		 				<td>
+		 					Panneaux-Surprises
+		 				</td>
+		 				<td>
+		 					Jeu récréatif
+		 				</td>
+		 				<td>
+		 					Parmis une liste de panneaux retournés, il faut trouver tous les couples de panneaux sauf les panneaux de Browser ! 
+		 				</td>
+		 				<td>
+		 					Tous public
+		 				</td>
+		 				<td>
+		 					2 minutes
+		 				</td>
+		 				<td>
+		 					Facile
+		 				</td>
+		 				<td>
+		 					11/11/2009
+		 				</td>
+		 				<td>
+		 					Nintendo Entertainment Analysis and Development développeur de New Super Mario Bros Wii
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="d-none delbox">
+	 						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck2">
+							  <label class="custom-control-label" for="customCheck2"></label>
+							</div>
+	 					</td>
+		 				<td>
+		 					Chasseur de Têtes
+		 				</td>
+		 				<td>
+		 					Party game
+		 				</td>
+		 				<td>
+		 					Une série de mosaïques avec des images de personnages apparaît sur le petit écran à gauche, et les joueurs doivent trouver cet arrangement exact des carreaux sur le grand écran vers la droite, en utilisant la télécommande Wii comme curseur.
+		 				</td>
+		 				<td>
+		 					Tous public
+		 				</td>
+		 				<td>
+		 					5 minutes
+		 				</td>
+		 				<td>
+		 					Moyen
+		 				</td>
+		 				<td>
+		 					29/05/2007
+		 				</td>
+		 				<td>
+		 					Hudson Soft développeur de Mario Party 8
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="d-none delbox">
+	 						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck3">
+							  <label class="custom-control-label" for="customCheck3"></label>
+							</div>
+	 					</td>
+		 				<td>
+		 					Porte-à-porte
+		 				</td>
+		 				<td>
+		 					Party Game
+		 				</td>
+		 				<td>
+		 					Le but de ce mini-jeu est d'être le premier à accéder à la bonne porte menant à la sortie du manoir. Chaque étage comprend cinq portes qui vont mener à l'étage inférieur, mais toutes les autres font rester au même étage. Il y a au total quatre étages.
+		 				</td>
+		 				<td>
+		 					Tous public
+		 				</td>
+		 				<td>
+		 					5 minutes
+		 				</td>
+		 				<td>
+		 					Facile
+		 				</td>
+		 				<td>
+		 					02/03/2012
+		 				</td>
+		 				<td>
+		 					Nd Cube developpeur de Mario Party 9
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="d-none delbox">
+	 						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck4">
+							  <label class="custom-control-label" for="customCheck4"></label>
+							</div>
+	 					</td>
+		 				<td>
+		 					Topi Taupe terrées
+		 				</td>
+		 				<td>
+		 					Party Game
+		 				</td>
+		 				<td>
+		 					Des Topi Taupe vont prendre les coffres au trésor et aller sous terre. Avant chaque mélange par les Topi Taupes, les joyaux vont tomber dans chaque coffre et il faut retenir celui qui en a le plus reçu. Les Topi Taupe vont ensuite mettre les coffres devant chaque participants et ceux ci vont devoir choisir quel coffre à la plus de joyaux.
+		 				</td>
+		 				<td>
+		 					Tous public
+		 				</td>
+		 				<td>
+		 					3 minutes
+		 				</td>
+		 				<td>
+		 					Moyen
+		 				</td>
+		 				<td>
+		 					02/03/2012
+		 				</td>
+		 				<td>
+		 					Nd Cube developpeur de Mario Party 9
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="d-none delbox">
+	 						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck5">
+							  <label class="custom-control-label" for="customCheck5"></label>
+							</div>
+	 					</td>
+		 				<td>
+		 					Labyrinthe et Tuyaux
+		 				</td>
+		 				<td>
+		 					Party Game
+		 				</td>
+		 				<td>
+		 					Les deux personnages sont dans un champ en forme de labyrinthe formés par des tuyaux. Le but est de trouver la bonne combinaison de tuyaux pour atteindre le centre du labyrinthe et emporter la victoire en passant dans le tuyau vert.
+		 				</td>
+		 				<td>
+		 					Tous public
+		 				</td>
+		 				<td>
+		 					5 minutes
+		 				</td>
+		 				<td>
+		 					Moyen
+		 				</td>
+		 				<td>
+		 					27/01/2006
+		 				</td>
+		 				<td>
+		 					Hudson Soft développeur de Mario Party 7
+		 				</td>
+		 			</tr>
+	 			</tbody>	
+	 		</table>
+	 	</div>
+
+	 	<div id="actionsButtons" class ="row mt-3 mt-sm-0">
+	 		<div class="col-xl-6 col-lg-3 col-md-0 col-sm-0">
+	 		</div>
+	 		<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 mt-2 mt-md-0">
+	 			<button  id="add-btn" class="form-control btn btn-primary">Ajouter un exercice</button>
+	 		</div>
+	 		<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 mt-2 mt-md-0">
+	 			<button  id="del-btn" class="form-control btn btn-primary">Supprimer un exercice</button>
+	 		</div>
+	 		<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 mt-2 mt-md-0">
+	 			<button id="edit-btn" class="form-control btn btn-primary">Modifier un exercice</button>
+	 		</div>
+	 	</div>
+	 		
+	 	<div id="actionsDel" class ="row mt-3 mt-sm-0 d-none">
+	 		<div class="col-md-8">
+	 		</div>
+	 		<div class="col-md-2 mt-2 mt-md-0">
+	 			<button id="valid-delete" class="form-control btn btn-success">Supprimer</button>
+	 		</div>
+	 		<div class="col-md-2 mt-2 mt-md-0">
+	 			<button id="cancel-delete" class="form-control btn btn-danger">Annuler</button>
+	 		</div>
+	 	</div>
+
+	 	 <!-- Ajout -->
+		<div id="div-add" class="container-fluid d-none">
+			<h3 class="mt-4">Ajouter un exercice</h3>
+			<div class="mb-4">
+				<form id="form-add" novalidate>
+					<div class="form-row mt-3">
+						<div class="col-md-3 mt-2">
+							<label>Nom de l'exercice*</label>
+							<input type="text"  id="ajoutNomExe" class="form-control" placeholder="Nom de l'exercice" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Type d'exercice*</label>
+							<input type="text" id="ajoutTypeExe" class="form-control" placeholder="Type d'activité" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Descritpion*</label>
+							<textarea id="descrip" class="form-control" placeholder="Description" required></textarea>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Public cible*</label>
+							<input  id="publicCible" class="form-control" placeholder="Public cible" required>
+						</div>
+					</div>
+					<div class ="form-row mt-3">
+						<div class="col-md-3 mt-2">
+							<label>Durée de l'activité*</label>
+							<input type="number" id="dureeActiv" class="form-control" placeholder="Durée de l'activité (en minutes)" min="1" max="120" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Difficulté*</label>
+							<select class="form-control" id='nivDifficulte' required>
+								<option>Facile</option>
+								<option>Moyen</option>
+								<option>Difficile</option>
+								<option>Extrême</option>
+							</select>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Date de création*</label>
+							<input type="date" class="form-control" id='dateCreation' name="dateCreation" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Information sur l'auteur*</label>
+							<input type="text" class="form-control" id="infoAuteur" name="infoAuteur" placeholder="Information sur l'auteur" required>
+						</div>
+					</div>
+					<div class ="form-row mt-3">
+						<div class ="col-md-8">
+						</div>
+						<div class ="col-md-2">
+							<button type="submit" id="valid-add" class="form-control btn btn-success">Ajouter</button>
+						</div>
+						<div class ="col-md-2">
+							<button id="cancel-add" class="form-control btn btn-danger mt-2 mt-md-0">Annuler</button>
+						</div>
+					</div>
+				</form> 
+			</div>
+		</div>
+
+		<div id="selectModif" class ="row mt-3 mt-sm-0 d-none">
+	 		<div class="col-md-10">
+	 		</div>
+	 		<div class="col-md-2 mt-2 mt-md-0">
+	 			<button id="cancel-selectModif" class="form-control btn btn-danger">Annuler</button>
+	 		</div>
+	 	</div>
+
+		<div id="div-mod" class="container-fluid d-none">
+			<h3 class="mt-4">Modifier l'exercice</h3>
+			<div class="mb-4">
+				<form id="form-mod" novalidate>
+					<div class="form-row mt-3">
+						<div class="col-md-3 mt-2">
+							<label>Nom de l'exercice*</label>
+							<input type="text"  id="modifNomExe" class="form-control" placeholder="Nom de l'exercice" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Type d'exercice*</label>
+							<input type="text" id="modifTypeExe" class="form-control" placeholder="Type d'activité" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Description*</label>
+							<textarea id="moifDescrip" class="form-control" placeholder="Description" required></textarea>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Public cible*</label>
+							<input  id="moifPublicCible" class="form-control" placeholder="Public cible" required>
+						</div>
+					</div>
+					<div class ="form-row mt-3">
+						<div class="col-md-3 mt-2">
+							<label>Durée de l'activité*</label>
+							<input type="number" id="modifDureeActiv" class="form-control" placeholder="Durée de l'activité (en minutes)" min="1" max="120" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Difficulté*</label>
+							<select class="form-control" id='modifNivDifficulte' required>
+								<option>Facile</option>
+								<option>Moyen</option>
+								<option>Difficile</option>
+								<option>Extrême</option>
+							</select>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Date de création*</label>
+							<input type="date" class="form-control" id='modifDateCreation' name="dateCreation" required>
+						</div>
+						<div class="col-md-3 mt-2">
+							<label>Informations sur l'auteur*</label>
+							<input type="text" class="form-control" id="modifInfoAuteur" name="infoAuteur" placeholder="Information sur l'auteur" required>
+						</div>
+					</div>
+					<div class ="form-row mt-3">
+						<div class ="col-md-8">
+						</div>
+						<div class ="col-md-2">
+							<button type="submit" id="valid-mod" class="form-control btn btn-success">Modifier</button>
+						</div>
+						<div class ="col-md-2 mt-2 mt-md-0">
+							<button id="cancel-mod" class="form-control btn btn-danger">Annuler</button>
+						</div>
+					</div>
+				</form> 
+			</div>
+		</div>
+	 </main>
+
+	 <!-- Footer -->
+	<footer class="page-footer font-small blue pt-4">
+
+	  <!-- Footer Links -->
+	  <div class="container-fluid text-center text-md-left">
+
+	    <!-- Grid row -->
+	    <div class="row">
+
+	      <!-- Grid column -->
+	      <div class="col-md-6 mt-md-0 mt-3">
+
+	        <!-- Content -->
+	        <h5 class="text-uppercase text-dark">À propos</h5>
+	        <p class="text-dark">Cette page web a été réalisé selon les critères d'Interface Homme-Machine (IHM) vu aux cours de l'UE LifIHM à l'université Claude Bernard Lyon 1. Ce site web tend à être ergonomique et responsive tout en proposant des fonctionnalités avancées.</p>
+	        <p class="text-dark">Réalisé par Seunguk YUN et Nicolas CHAMAND dans le cadre du projet IHM.</p>
+
+	      </div>
+	      <!-- Grid column -->
+
+	      <hr class="clearfix w-100 d-md-none pb-3">
+
+	      <!-- Grid column -->
+	      <div class="col-md-3 mb-md-0 mb-3">
+
+	        <!-- Links -->
+	        <h5 class="text-uppercase text-dark">Références</h5>
+
+	        <ul class="list-unstyled">
+	          <li class="mt-2">
+	            <a class="text-white bg-dark rounded-pill p-1" href="https://perso.liris.cnrs.fr/stephanie.jean-daubias/enseignement/IHM/" title="Lien vers le site de l'UE LifIHM">LifIHM - Interactions Homme-Machine</a>
+	          </li>
+	          <li class="mt-2">
+	            <a class="text-white bg-dark rounded-pill p-1" href="https://www.w3schools.com/" title="Lien vers le site de tutoriels W3Schools">W3Schools - Tutoriels web</a>
+	          </li>
+	          <li class="mt-2">
+	            <a class="text-white bg-dark rounded-pill p-1" href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" title="Lien vers la documentation Bootstrap">Documentation Bootstrap</a>
+	          </li>
+	        </ul>
+
+	      </div>
+	      <!-- Grid column -->
+
+	      <!-- Grid column -->
+	      <div class="col-md-3 mb-md-0 mb-3">
+
+	        <!-- Links -->
+	        <h5 class="text-uppercase text-dark">Contacts</h5>
+
+	        <ul class="list-unstyled">
+	          <li>
+	            <a class="text-white bg-dark rounded-pill p-1" href="mailto:Seunguk.yun@etu.univ-lyon1.fr" title="Contacter Seunguk YUN par e-mail">seunguk.yun@etu.univ-lyon1.fr</a>
+	          </li>
+	          <li class="mt-2">
+	            <a class="text-white bg-dark rounded-pill p-1" href="mailto:nicolas.chamand@etu.univ-lyon1.fr" title="Contacter Nicolas CHAMAND par e-mail">nicolas.chamand@etu.univ-lyon1.fr</a>
+	          </li>
+	        </ul>
+	      </div>
+	      <!-- Grid column -->
+	    </div>
+	    <!-- Grid row -->
+	  </div>
+	  <!-- Footer Links -->
+
+	  <!-- Copyright -->
+	  <div class="footer-copyright text-center py-3 text-dark">© 2020 Copyright:
+	    <span>CY</span>
+	  </div>
+	  <!-- Copyright -->
+
+	</footer>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/responsive-tables.js"></script>
+	<script type="text/javascript" src="js/general.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html
+{
+	font-size: 100%;
+}
+body
+{
+	margin: 0;
+}
+h1
+{
+	text-align: center;
+}
+#global
+{
+	font-family: 'Montserrat';
+	background-image: url('../images/school_paper.jpg');
+	transition: 0.6s all;
+	height: 100vh;
+	padding: 1% 2%;
+	overflow: hidden;
+}
+#home
+{
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 4px;
+
+}
+#home:hover
+{
+	color: red;
+}
+#p_pendu
+{
+	text-align: center;
+	font-size: 160%;
+	margin-bottom: 10%;
+}
+#p_pendu span
+{
+	padding: 8px;
+}
+.l_pendu
+{
+	margin: 1%;
+	padding: 1%;
+}
+#img_pendu
+{
+	width: 100%;
+}
+#flex
+{
+	display: flex;
+	margin-top: 5%;
+}
+#div_pendu
+{
+	width: 50%;
+}
+#div_img_pendu
+{
+	width: 50%;
+	height: 80vh;
+	border: 1px solid black;
+	box-shadow: 4px 4px 4px black;
+	background-color: white;
+}
+.cache
+{
+	border-bottom: 2px solid black;
+}
+.l_list
+{
+	justify-content: space-around;	
+	flex-wrap: wrap;
+}
+.letter
+{
+	display: inline-block;
+	font-size: 130%;
+	width: 4%;
+	padding: 2%;
+	margin: 1%;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 2px 2px 0px black;
+	text-align: center;
+}
+#refresh_button
+{
+	vertical-align: middle;
+	width: 10%;
+}
+.red
+{
+	background-color: red;
+}
+.green
+{
+	background-color: green;
+}
+
+
+@media(max-width: 1025px)
+{
+	html
+	{
+		font-size: 150%;
+	}
+	#global
+	{
+		padding: 3% 0% 1% 2%;
+	}
+	#flex
+	{
+		display: block;
+	}
+	.fixed
+	{
+		width: 60%;
+	}
+	.toggle
+	{
+		left: -57.6%;
+	}
+	#div_pendu
+	{
+		width: 100%;
+		margin: 0;
+	}
+	#div_img_pendu
+	{
+		width: 100%;
+		border: none;
+		box-shadow: none;
+		background-color: initial;
+		margin: 0;
+	}
+	#img_pendu
+	{
+		height: 70%;
+	}
+	#p_pendu
+	{
+		font-size: 150%;
+		width: 100%;
+	}
+	#p_pendu span
+	{
+		padding: 8px;
+	}
+	.l_list
+	{
+		padding: 4%;
+	}
+	.letter
+	{
+		width: 20px;
+		margin: 1%;
+	}
+	#home
+	{
+		padding: 3px;
+		border: 1px solid black;
+	}
+	.align
+	{
+		text-align: center;
+	}
+}
+@media(max-width: 414px)
+{
+	html
+	{
+		font-size: 110%;
+	}
+	#flex
+	{
+		display: block;
+	}
+	.fixed
+	{
+		width: 100%;
+	}
+	.toggle
+	{
+		left: -96%;
+	}
+	#div_pendu
+	{
+		width: 100%;
+	}
+	#div_img_pendu
+	{
+		width: 100%;
+		border: none;
+		box-shadow: none;
+		background-color: initial;
+	}
+	#img_pendu
+	{
+		height: 60%;
+	}
+	#p_pendu
+	{
+		width: 375px;
+	}
+	#p_pendu span
+	{
+		padding: 8px;
+	}
+	.l_list
+	{
+		padding: 4%;
+	}
+	.letter
+	{
+		width: 20px;
+		margin: 1%;
+	}
+}

@@ -1,0 +1,15 @@
+
+.center {
+		margin: 100px 40px 0px 0px;
+		padding: 4% 6%;
+		border: 3px solid green;
+		text-align: center;
+		font-style: italic;
+		background-color: white;
+}
+
+.welcomemsg {
+		font-size: 30px;
+		font-style: italic;
+		color: purple;
+}

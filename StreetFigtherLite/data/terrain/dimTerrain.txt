@@ -1,0 +1,15 @@
+terrain1 620 224
+terrain2 764 223 
+terrain3 680 224 
+terrain4 557 224 
+terrain5 621 224
+terrain6 739 224 
+terrain7 621 224
+terrain9 621 224
+terrain10 679 224  
+terrain11 590 224  
+terrain12 695 224 
+terrain13 695 224 
+terrain14 680 224 
+terrain15 700 224 
+terrain16 679 224 

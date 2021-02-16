@@ -1,0 +1,36 @@
+html
+{
+	size: 100%;
+}
+
+#id-login
+{
+	margin-right: 2rem;
+}
+#form-add, #form-edit
+{
+	margin-top: 2rem;
+	padding-right: 2rem; 
+}
+#editQuizzBtn, #delQuizzBtn
+{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.delQuestionBtn, .editQuestionBtn
+{
+	position: relative;
+	top: 0;
+	left: initial;
+}
+.divQuestUser
+{
+	position: relative;
+}
+.actionBtn
+{
+	bottom: 0;
+	right: initial;
+	margin-left: 1rem;
+	position: absolute;
+}

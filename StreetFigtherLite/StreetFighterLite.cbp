@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Street Fither Lite" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="." />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="$make -f $makefile " />
+			<CompileFile command="$make -f $makefile " />
+			<Clean command="$make -f $makefile clean" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile $target" />
+			<SilentBuild command="$make -f $makefile  &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="SF_Graphic">
+				<Option output="bin/executable_sfml" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c11" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="./extern/SFML-2.5.1/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add library="sfml-graphics-s" />
+					<Add library="sfml-window-s" />
+					<Add library="sfml-system-s" />
+					<Add library="opengl32" />
+					<Add library="freetype" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add directory="./extern/SFML-2.5.1/lib" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile make_dir bin/executable_sfml" />
+					<CompileFile command="$make -f $makefile" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile make_dir bin/executable_sfml &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="SF_Txt">
+				<Option output="bin/executable_txt" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-std=c11" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile make_dir bin/executable_txt" />
+					<CompileFile command="$make -f $makefile" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile make_dir bin/executable_txt &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add directory="./src/core" />
+		</Compiler>
+		<Unit filename="src/core/Jeu.cpp" />
+		<Unit filename="src/core/Jeu.h" />
+		<Unit filename="src/core/Personnage.cpp" />
+		<Unit filename="src/core/Personnage.h" />
+		<Unit filename="src/core/Projectile.h" />
+		<Unit filename="src/core/Vec2.cpp" />
+		<Unit filename="src/core/Vec2.h" />
+		<Unit filename="src/core/testregression.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="src/sfml/Ken.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/Ken.h">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/Ryu.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/Ryu.h">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlJeu.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlJeu.h">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlPersonnage.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlPersonnage.h">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlTerrain.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfmlTerrain.h">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/sfml/sfml_main.cpp">
+			<Option target="SF_Graphic" />
+		</Unit>
+		<Unit filename="src/txt/main_txt.cpp">
+			<Option target="SF_Txt" />
+		</Unit>
+		<Unit filename="src/txt/txtJeu.cpp">
+			<Option target="SF_Txt" />
+		</Unit>
+		<Unit filename="src/txt/txtJeu.h">
+			<Option target="SF_Txt" />
+		</Unit>
+		<Unit filename="src/txt/winTxt.cpp">
+			<Option target="SF_Txt" />
+		</Unit>
+		<Unit filename="src/txt/winTxt.h">
+			<Option target="SF_Txt" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

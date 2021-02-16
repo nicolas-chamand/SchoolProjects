@@ -1,0 +1,7 @@
+# Ignore
+*.depend
+*.layout
+bin
+obj
+# Except this file
+!.gitignore

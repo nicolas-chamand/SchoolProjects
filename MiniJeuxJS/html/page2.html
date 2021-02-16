@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+
+		<link rel="stylesheet" type="text/css" href="..\styles\IA.css">
+		<link rel="stylesheet" type="text/css" href="..\styles\page2.css">	
+	</head>
+
+	<body>
+		<section id="global">
+			<div class="align"><a id="home" href="home.html">Retour au menu</a></div>
+			<h1 id="title">SNAKE 2.0</h1>
+			<div>
+				<table id="table">
+				</table>
+			</div>
+
+			<div id="div_d_pad">
+				<div id="left"></div>
+				<div id="up"></div>
+				<div id="right"></div>
+				<div id="down"></div>
+				<img id="d_pad" src="../images/d_pad.png" alt="touches directionnelles">
+			</div>
+			
+			<div id="div_niveau">
+				<form>
+					<p>NIVEAU DE DIFFICULTE</p>
+					<select id="niveau">
+						<option>Normal</option>
+						<option>Rapide</option>
+						<option>Eclair</option>
+					</select>
+				</form>
+			</div>
+			<div id="div_score">
+				<p>Score</p>
+				<div>0</div>
+				<p>Meilleur score</p>
+				<div>0</div>
+			</div>
+		</section>
+
+		<section class="fixed toggle">
+				<div class="help">
+					<div id="help_text">
+						<h1 id="header_help"><img src="..\images\logo_account.png" alt="Logo de Elia" id="logo"> Elia <span id="online">(En ligne)</span></h1>
+					</div>
+					<div id="toggle_help">
+						<img id='arrow' src="..\images\left-arrow.png">
+					</div>
+				</div>	
+		</section>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+		<script type="text/javascript" src="..\js\IA_object.js"></script>
+		<script type="text/javascript" src="..\js\page2.js"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+html
+{
+	font-size: 100%;
+}
+body
+{
+	padding: 2% 8%;
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+	        	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+	        	linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	overflow: hidden;
+	height: 100vh;
+}
+#welcome
+{
+	font-family: 'Roboto Mono';
+	padding: 0% 2% 2% 2%;
+	height: 90vh;
+	border: 2px solid black;
+	border-radius: 6px;
+	background-color: white;
+}
+.continue_button
+{
+	width: 30%;
+}
+#txt_align
+{
+	text-align: right;
+}
+#real_bt
+{
+	text-decoration: none;
+	color: black;
+	cursor: help;
+}
+
+@media(max-width: 1025px)
+{
+	html
+	{
+		font-size: 150%;
+	}
+	#button
+	{
+		width: 100px;
+		height: 30px;
+	}
+}
+@media(max-width: 414px)
+{
+	html
+	{
+		font-size: 100%;
+	}
+	body
+	{
+		margin: 0;
+		padding: 0;
+		opacity: 0.8;
+	}
+	#welcome
+	{
+		height: 100vh;	
+		border: 1px solid white;
+	}
+	.continue_button
+	{
+		width: 50%;
+	}
+}

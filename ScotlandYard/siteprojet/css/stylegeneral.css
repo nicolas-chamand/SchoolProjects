@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+html
+{
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+body 
+{
+	font-family: Alata;
+    background-color: #EEEEEE;
+    margin: 0;
+}
+
+header,
+nav,
+main,
+footer 
+{
+    padding: 1em 0;
+}
+
+header 
+{
+    background-color: green;
+    text-align: center;
+    border-radius: 1em;
+    height: 230px;
+}
+
+#divCentral 
+{
+    display: flex;
+	align-items: stretch;
+    margin: auto;
+	box-sizing: border-box;
+	height: 700px;
+}
+
+nav 
+{
+	flex : 2;
+	flex-basis: 10%;
+    background-color: #AFAFAF;
+	border-radius: 5px;
+	width: 200px;
+    line-height: 2em;
+}
+ul
+{
+	list-style:none;
+}
+
+nav>ul>li
+{
+    margin-top: 10px; 
+}
+nav a 
+{
+    color: black;
+	padding: 3px;
+	text-decoration:none;
+	border: 1px solid black;
+}
+nav a:hover 
+{
+    color: red;
+}
+
+main 
+{
+	flex : 10;
+    background-color: #EEEEEE;
+    padding-left: 6em;
+}
+
+footer 
+{
+	display: flex;
+	justify-content: space-around;
+    background-color: #669933;
+    border-radius: 1em;
+}
+
+.lien_footer
+{
+    color: initial;
+    text-decoration: none;
+}
+.lien_footer:hover
+{
+    color: red;
+}
+.taille 
+{
+    width: 310px;
+    height: 230px;
+    margin-left: 20px;
+}
+.hstyle 
+{
+    font-size: 40px;
+    font-style: oblique;
+}
+
+.hstyle1 
+{
+    font-size: 30px;
+    font-style: italic;
+}   
+
+.navstyle 
+{
+    font-size: 20px;
+    font-style: italic;
+}   
+

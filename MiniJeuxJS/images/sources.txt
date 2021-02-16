@@ -1,0 +1,12 @@
+
+logo account : https://es.m.wikipedia.org/wiki/Archivo:Microsoft_Account.svg
+refresh_button : https://image.flaticon.com/icons/png/512/61/61225.png
+paper background : https://img.freepik.com/free-photo/white-paper-canvas-texture-background-design-backdrop-overlay-design_1962-68.jpg?size=626&ext=jpg
+pendu_gif : https://gfycat.com/fr/offensivespitefulfruitbat
+snake : https://giphy.com/gifs/snake-gif-4JmTg4bTuofUQ
+animation : https://infos.profmath.fr/IMG/gif/animation.gif
+button_continue : https://t3.ftcdn.net/jpg/00/29/40/86/240_F_29408673_bTGH2CIYIWsicwIw7LBxAOWa3k34lsWD.jpg
+button_continue_red : https://t4.ftcdn.net/jpg/00/32/06/71/240_F_32067148_XlYfpbPJmuoyjdFPc6lIaJo1JtAmtdqG.jpg
+pacman : https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2Ftld3gmmtrgSi9-jOOYCwMQ%252F2cbd9945ebb5a2069f18c8e82d69bb04.gif&width=1200&quality=80
+background : https://thumbs.gfycat.com/LeadingWeakBantamrooster-size_restricted.gif
+d_pad : https://i.stack.imgur.com/4r4UR.png
