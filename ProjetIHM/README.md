@@ -1,0 +1,2 @@
+#Projet de page web ergonomique
+Ce projet à été réalisé dans le cadre de l'UE "Interaction Homme-Machine". Il s'agissait de réaliser un page web affichant des données dans un tableau de façon ergonomique. Les langages utilisés étaient HTML/CSS/Javascript et la bibliothèque Bootstrap. 
