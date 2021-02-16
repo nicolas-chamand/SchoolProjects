@@ -16,4 +16,4 @@ Ce projet a été réalisé en 2e année de licence informatique et reprend le j
 
 ### Street Fighter Lite 
 C'est un projet reprenant l'un des jeu Street Fighter, réalisé en 2e année de licence informatique utilisant le langage C++ et la bibliothèque SFML.
-**Remarque : Sur Windows, SFML requiert une certaines version de compiler, plus de détails dans le README **  
+**Remarque : Sur Windows, SFML requiert une certaines version de compiler, plus de détails dans le README**  
